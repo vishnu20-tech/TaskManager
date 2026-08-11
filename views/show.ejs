@@ -1,0 +1,10 @@
+<% layout('./layouts/boilerplate') %>
+    <h3>Task Information</h3>
+    <p><strong>Title:</strong><%= task.title %></p>
+    <p><strong>Description:</strong><%= task.description %></p>
+        <p><strong>Status:</strong><%= task.status %></p>
+        <p><strong>Priority:</strong><%= task.priority %></p>
+        <p><strong>DueDate:</strong><%= task.dueDate %></p>
+        <p><strong>CreatedDate:</strong><%= task.createdDate %></p>
+        <a href="/tasks" class="btn btn-primary">Back To HomePage</a>
+        <a href="/tasks/<%= task._id %>/edit" class="btn btn-success">Edit Task</a>

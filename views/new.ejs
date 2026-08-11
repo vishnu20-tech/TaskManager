@@ -1,0 +1,103 @@
+<% layout('./layouts/boilerplate') %>
+
+<div class="container">
+<h3 class="mb-4">Add New Task</h3>
+<form action="/tasks" method="POST">
+
+    <div class="mb-3">
+        <label for="title" class="form-label">Task Title</label>
+        <input 
+            type="text" 
+            class="form-control border-dark"
+            id="title"
+            name="title"
+            placeholder="Enter task title"
+            required
+        >
+    </div>
+
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+
+        <div class="form-floating">
+            <textarea 
+                class="form-control border-dark"
+                placeholder="Add description of task"
+                id="description"
+                name="description"
+                style="height: 120px"
+            ></textarea>
+
+            <label for="description">Add Description</label>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-3">
+
+        <div class="col-md-6">
+            <label for="status" class="form-label">Status</label>
+
+            <select 
+                class="form-select border-dark"
+                id="status"
+                name="status"
+                required
+            >
+                <option value="" selected>Select Status</option>
+                <option value="in-process">In-process</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <label for="priority" class="form-label">Priority</label>
+
+            <select 
+                class="form-select border-dark"
+                id="priority"
+                name="priority"
+                required
+            >
+                <option value="" selected>Select Priority</option>
+                <option value="High">High</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Low">Low</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="row g-4 mb-3">
+
+        <div class="col-md-6">
+            <label for="dueDate" class="form-label">Due Date</label>
+
+            <input 
+                type="date"
+                class="form-control border-dark"
+                id="dueDate"
+                name="dueDate"
+            >
+        </div>
+
+        <div class="col-md-6">
+            <label for="createdDate" class="form-label">Created Date</label>
+
+            <input 
+                type="date"
+                class="form-control border-dark"
+                id="createdDate"
+                name="createdDate"
+            >
+        </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-success px-4">
+        Add Task
+    </button>
+
+</form>
+
+</div>
